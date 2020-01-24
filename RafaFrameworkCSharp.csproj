@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Sql\Dal\MetaData\Reports.Binders.txt" />
+    <None Remove="Sql\Dal\MetaData\Reports.Queries.txt" />
+    <None Remove="Sql\Dal\MetaData\_main.Binders.txt" />
+    <None Remove="Sql\Dal\MetaData\_main.Queries.txt" />
+    <None Remove="Sql\Dal\MetaData\_messenger.binders.txt" />
+    <None Remove="Sql\Dal\MetaData\_messenger.queries.txt" />
+    <None Remove="Sql\Dal\MetaData\_messenger.serializers.txt" />
+    <None Remove="Sql\Negocio\Serialization\Reports.Serializers.txt" />
+    <None Remove="Sql\Negocio\Serialization\_main.Serializers.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\Dal\MetaData\reports.binders.txt" />
+    <EmbeddedResource Include="Sql\Dal\MetaData\_main.queries.txt" />
+    <EmbeddedResource Include="Sql\Dal\MetaData\_main.binders.txt" />
+    <EmbeddedResource Include="Sql\Dal\MetaData\reports.queries.txt" />
+    <EmbeddedResource Include="Sql\Dal\MetaData\reports.serializers.txt" />
+    <EmbeddedResource Include="Sql\Dal\MetaData\_main.serializers.txt" />
+    <EmbeddedResource Include="Sql\Dal\MetaData\_messenger.binders.txt" />
+    <EmbeddedResource Include="Sql\Dal\MetaData\_messenger.queries.txt" />
+    <EmbeddedResource Include="Sql\Dal\MetaData\_messenger.serializers.txt" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="System.Data.SqlClient" Version="4.6.0" />
+  </ItemGroup>
+  
+</Project>
